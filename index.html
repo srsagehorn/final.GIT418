@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="highlight.site.pack.js"></script>
+    <!-- initialize the highlighting when the page loads -->
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>forEach() function tutorial</title>
+  </head>
+  <body>
+    <header>
+      <nav class="card nav-tabs">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="./index.html">.forEach()</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./map.html">.map()</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="row down">
+        <div class="col-md-2 line"></div>
+        <div class="col-md-10 right">
+          <h1 class="mainHeading">.forEach() function tutorial</h1>
+          <div class="col-md-10">
+            <p>
+              The forEach() method is a javascript array method. It serves as an
+              alternative to a for loop by calling each element in an array and
+              executing the proceeding function block.
+            </p>
+            <h2 class="heading">Why use the .forEach() method?</h2>
+            <div class="col-md-10 side">
+              <p>
+                For this example we will be working with the following array
+              </p>
+              <pre><code>var fruits = ["apple", "orange", "banana", "cucumber", "strawberry"]</code></pre>
+              <p>
+                If we attempted to do a for loop, and console log each value it
+                would look like this:
+              </p>
+              <pre><code>var fruits = ["apple", "orange", "banana", "cucumber", "strawberry"]
+for ( var i = 0; i < fruits.length; i++) {
+            console.log(fruits[i])
+          }</code></pre>
+              <button id="forloop" type="button" class="btn btn-dark">
+                Run
+              </button>
+              <pre id="aforloop" style="display: none"><code>apple
+orange
+banana
+cucumber
+strawberry</code></pre>
+              <p>
+                That is quite a lot of code 🙁 luckily the .forEach() function
+                makes this easier! 😃
+              </p>
+            </div>
+            <h3 class="heading">Syntax</h3>
+            <div class="col-md-10 side">
+              <p>
+                In the .forEach() method, you initialize the array you want to
+                work with, then call .forEac() directly after the array name in
+                a statement. Within those parentheses you can place any function
+                and the method goes through each index in the array and applies
+                that function. Unlike the .map() method, it will not place it
+                back into an array.
+              </p>
+              <p>Function</p>
+              <pre><code>var array = ["index1", "index2", "index3"]
+array.forEach(function (element) {
+            your function here
+            })</code></pre>
+              <p>Fat arrow function</p>
+              <pre><code>var array = ["index1", "index2", "index3"]
+array.forEach(element => your function here)</code></pre>
+              <p>
+                So for our fruits example the forEach function would look like:
+              </p>
+              <pre><code>var fruits = ["apple", "orange", "banana", "cucumber", "strawberry"]
+fruits.forEach(fruit => console.log(fruit))</code></pre>
+              <button id="fruits" type="button" class="btn btn-dark">
+                Run
+              </button>
+              <pre id="afruits" style="display: none"><code>apple
+orange
+banana
+cucumber
+strawberry</code></pre>
+              <p></p>
+            </div>
+            <h4 class="heading">Examples</h4>
+            <div class="col-md-10 side">
+              <p>Here we multiple every number by 2:</p>
+              <pre><code>var numbers = [3, 5, 10, 9]
+numbers.forEach(num => {
+    console.log(num*2)})</code></pre>
+              <button id="nums" type="button" class="btn btn-dark">Run</button>
+              <pre id="anums" style="display: none"><code>6
+10
+20
+18</code></pre>
+              <p>Here we change every string to uppercase:</p>
+              <pre><code>var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+days.forEach(day => {
+      console.log(day.toUpperCase())})</code></pre>
+              <button id="days" type="button" class="btn btn-dark">Run</button>
+              <pre id="adays" style="display: none"><code>MONDAY
+TUESDAY
+WEDNESDAY
+THURSDAY
+FRIDAY
+SATURDAY
+SUNDAY</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <small>Shannon Sagehorn 2020 | All Rights Reserved ©</small>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/forEach.js"></script>
+  </body>
+</html>
