@@ -1,5 +1,5 @@
 nav {
-  background-color: #431291 !important;
+  background-color: #031472 !important;
   height: 75px;
 }
 
@@ -41,7 +41,7 @@ header {
 }
 
 /* .line {
-  border-right: #431291 6px solid;
+  border-right: #031472 6px solid;
   height: 2500px;
 } */
 
@@ -50,18 +50,18 @@ header {
 }
 
 .heading {
-  background-color: #431291;
+  background-color: #031472;
   color: white;
   padding: 10px;
   border-radius: 10px;
-  /* color: #431291; */
+  /* color: #031472; */
   font-size: 38px;
   font-weight: 600;
   width: 100%;
 }
 
 .mainHeading {
-  color: #431291;
+  color: #031472;
   font-size: 52px;
   font-weight: 800;
 }
@@ -73,7 +73,7 @@ header {
 
 footer {
   text-align: center;
-  background-color: #431291;
+  background-color: #031472;
   color: white;
   margin-top: 50px;
 }
