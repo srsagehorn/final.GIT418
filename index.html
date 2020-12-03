@@ -43,9 +43,7 @@
           <h1 class="mainHeading">async function tutorial</h1>
           <div class="col-md-10">
             <p>
-              The forEach() method is a javascript array method. It serves as an
-              alternative to a for loop by calling each element in an array and
-              executing the proceeding function block.
+              An async function is a function declared with the async keyword. Async functions are instances of the AsyncFunction constructor, and the await keyword is permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
             </p>
             <h2 class="heading">Why use the async function?</h2>
             <div class="col-md-10 side">
@@ -57,10 +55,9 @@
                 If we attempted to do a for loop, and console log each value it
                 would look like this:
               </p>
-              <pre><code>var fruits = ["apple", "orange", "banana", "cucumber", "strawberry"]
-for ( var i = 0; i < fruits.length; i++) {
-            console.log(fruits[i])
-          }</code></pre>
+              <pre><code>async function foo() {
+                return 1
+             }</code></pre>
               <button id="forloop" type="button" class="btn btn-dark">
                 Run
               </button>
