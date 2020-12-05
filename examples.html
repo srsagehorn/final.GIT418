@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="highlight.site.pack.js"></script>
+    <!-- initialize the highlighting when the page loads -->
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Examples</title>
+  </head>
+  <body>
+    <header>
+      <nav class="card nav-tabs">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Classes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./examples.html">Examples</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- https://highlightjs.org/usage/ -->
+    <main>
+      <div class="row down">
+        <div class="col-md-2 line"></div>
+        <div class="col-md-10 right">
+          <h1 class="mainHeading">Classes Examples</h1>
+          <p>Now lets see how these work in action!</p>
+          <div class="col-md-10">
+            <h4 class="heading">Example 1</h4>
+            <div class="col-md-10 side">
+              <p>Here we have more objects created</p>
+              <pre><code>class FamilyMembers {
+                constructors(name, age, relation) {
+                      this.name = name;
+                      this.age = age;
+                      this.relation = relation;
+                        }
+                      }
+
+let auntBetty = new FamilyMembers("Betty", 57, "aunt")
+let uncleRoger = new FamilyMembers("Roger", 58, "Uncle")
+let cousinJen = new FamilyMembers("Jen", 23, "Cousin")
+let stepmomJulie = new FamilyMembers("Julie", 46, "Step Mom")
+
+console.log (auntBetty, uncleRoger, cousinJen, stepmomJulie)</code></pre>
+              <button id="fam" type="button" class="btn btn-dark">Run</button>
+              <pre
+                id="afam"
+                style="display: none"
+              ><code>{name : "Betty", age : 57, relation : "Aunt"}
+{name : "Roger", age : 58, relation : "Uncle"}
+{name : "Jen", age : 23, relation : "Cousin"}
+{name : "Julie", age : 46, relation : "Step Mom"}</code></pre>
+              </div>
+              <p></p>
+                <h4 class="heading">Example 2</h4>
+            <div class="col-md-10 side">
+              <p>Here we have more constructors</p>
+              <pre><code>class Animals {
+                constructors(name, type, covering, habitat, color, aquatic, eater) {
+                      this.name = name;
+                      this.type = type;
+                      this.covering = covering;
+                      this.habitat = habitat;
+                      this.color = color;
+                      this.aquatic = aquatic;
+                      this.eater = eater;
+                        }
+                      }
+
+let pelican = new Animals("Pelican", "Bird", "Feathers", "Coastal", "White and Grey", false, "Carnivore")
+let horse = new Animals("Horse", "Mammal", "Fur", "Grasslands", "Varied", false, "Herbivore")
+let turtle = new Animals("Turtle", "Reptile", "Shell", "Shallow Water", "Green", true, "Herbivore")
+
+console.log (pelican, horse, turtle)</code></pre>
+              <button id="animals" type="button" class="btn btn-dark">Run</button>
+              <pre
+                id="aanimals"
+                style="display: none"
+              ><code>{name : "Pelican",
+type : "Bird",
+covering : "Feathers",
+habitat : "Coastal",
+color : "White and Grey",
+aquatic : false,
+eater : "Carnivore"}
+
+{name : "Horse",
+type : "Mammal",
+covering : "Fur",
+habitat : "Grasslands",
+color : "Varied",
+aquatic : false,
+eater : "Herbivore"}
+
+{name : "Turtle",
+type : "Reptile",
+covering : "Shell",
+habitat : "Shallow Water",
+color : "Green",
+aquatic : true,
+eater : "Herbivore"}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <small>Shannon Sagehorn 2020 | All Rights Reserved ©</small>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

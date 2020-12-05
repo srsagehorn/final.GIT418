@@ -30,9 +30,9 @@
           <li class="nav-item">
             <a class="nav-link active" href="./index.html">Classes</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="./await.html">await</a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="./examples.html">Examples</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -62,22 +62,22 @@ let sistersCar =  {make : "toyota",
 
 let dadsCar =  {make : "dodge", 
                 model : "ram", 
-                color : "red"
+                color : "red",
                 year : 2006}
                 
 let momsCar =  {make : "honda",
                 model : "crosstour", 
                 color : "white",
                 year : 2018}
-              </code></pre>
+              
+console.log (myCar, sistersCar, dadsCar, momsCar)</code></pre>
               <button id="carsJS" type="button" class="btn btn-dark">
                 Run
               </button>
-              <pre id="acarsJS" style="display: none"><code>apple
-orange
-banana
-cucumber
-strawberry</code></pre>
+              <pre id="acarsJS" style="display: none"><code>{make: "ford", model: "focus", color: "grey", year: 2013}
+{make: "toyota", model: "rav4", color: "red", year: 2010}
+{make: "dodge", model: "ram", color: "red", year: 2006}
+{make: "honda", model: "crosstour", color: "white", year: 2018}</code></pre>
               <p></p>
               <p>
                 This is quite a lot of code 🙁 there must be a simpler way to make multiple similar objects. Well thats where classes come in 😃.
@@ -109,16 +109,20 @@ strawberry</code></pre>
                 }
               }</code></pre>
               <p>
-                So now that we have that class created what can we do with it? Well now we can simplify our example by creating each object.
+                So now that we have that class created what can we do with it? 
                 <br>
-                First 
+                Well now we can simplify our example by creating each object.
+                <br>
+                We will need to set a variable equal to a new version of the class template with each constructor input in the proceeding parentheses by doing:
               </p>
+              <pre><code>let newVariable = new Class (constructor, constructor, constructor)</code></pre>
+              <p>So for our example it would be :</p>
               <pre><code>class Cars {
                 constructors(make, model, color, year) {
                       this.make = make;
                       this.model = model;
                       this.color  = color;
-                      this.year = year
+                      this.year = year;
                         }
                       }
 
@@ -126,40 +130,17 @@ let myCar = new Car("ford", "focus", "grey", 2013)
 let sistersCar = new Car("toyota", "rav4", "red", 2010)
 let dadsCar = new Car("dodge", "ram", "red", 2006)
 let momsCar = new Car("honda", "crosstour", "white", 2018)
-                    </code></pre>
-              <button id="fruits" type="button" class="btn btn-dark">
+
+console.log (myCar, sistersCar, dadsCar, momsCar)</code></pre>
+              <button id="carsClass" type="button" class="btn btn-dark">
                 Run
               </button>
-              <pre id="afruits" style="display: none"><code>apple
-orange
-banana
-cucumber
-strawberry</code></pre>
+              <pre id="acarsClass" style="display: none"><code>{make: "ford", model: "focus", color: "grey", year: 2013}
+{make: "toyota", model: "rav4", color: "red", year: 2010}
+{make: "dodge", model: "ram", color: "red", year: 2006}
+{make: "honda", model: "crosstour", color: "white", year: 2018}</code></pre>
               <p></p>
-            </div>
-            <h4 class="heading">Examples</h4>
-            <div class="col-md-10 side">
-              <p>Here we multiple every number by 2:</p>
-              <pre><code>var numbers = [3, 5, 10, 9]
-numbers.forEach(num => {
-    console.log(num*2)})</code></pre>
-              <button id="nums" type="button" class="btn btn-dark">Run</button>
-              <pre id="anums" style="display: none"><code>6
-10
-20
-18</code></pre>
-              <p>Here we change every string to uppercase:</p>
-              <pre><code>var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-days.forEach(day => {
-      console.log(day.toUpperCase())})</code></pre>
-              <button id="days" type="button" class="btn btn-dark">Run</button>
-              <pre id="adays" style="display: none"><code>MONDAY
-TUESDAY
-WEDNESDAY
-THURSDAY
-FRIDAY
-SATURDAY
-SUNDAY</code></pre>
+              <p><a id = "bottomLink" href="./examples.html">See more examples -></a></p>
             </div>
           </div>
         </div>
@@ -185,6 +166,6 @@ SUNDAY</code></pre>
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script src="../final.GIT418/js/async.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

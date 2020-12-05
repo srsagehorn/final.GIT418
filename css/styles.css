@@ -117,3 +117,10 @@ pre {
   margin-left: auto;
   margin-right: auto;
 }
+
+#bottomLink {
+  color: #031472;
+  font-size: 14px;
+  font-weight: 600;
+  float: right;
+}
