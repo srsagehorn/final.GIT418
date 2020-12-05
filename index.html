@@ -21,18 +21,18 @@
       hljs.initHighlightingOnLoad();
     </script>
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>forEach() function tutorial</title>
+    <title>JavaScript Classes Tutorial</title>
   </head>
   <body>
     <header>
       <nav class="card nav-tabs">
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link active" href="./index.html">async</a>
+            <a class="nav-link active" href="./index.html">Classes</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="./await.html">await</a>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </header>
@@ -40,60 +40,93 @@
       <div class="row down">
         <div class="col-md-2 line"></div>
         <div class="col-md-10 right">
-          <h1 class="mainHeading">async function tutorial</h1>
+          <h1 class="mainHeading">JavaScript Classes Tutorial</h1>
           <div class="col-md-10">
             <p>
-              An async function is a function declared with the async keyword. Async functions are instances of the AsyncFunction constructor, and the await keyword is permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+              In ES6, released in 2015, JavaScript introduced a new feature called classes. This allows developers to create similar objects easily by creating a basic format for each class and then instantiating and adjusting the class from there. Its important to note that even though classes may look like objects, they are not, they are simply templates for objects.
             </p>
-            <h2 class="heading">Why use the async function?</h2>
+            <h2 class="heading">Why use classes?</h2>
             <div class="col-md-10 side">
               <p>
-                For this example we will be working with the following array
+                Say for example that you wanted to create the following objects in JS you would do it like this:
               </p>
-              <pre><code>var fruits = ["apple", "orange", "banana", "cucumber", "strawberry"]</code></pre>
-              <p>
-                If we attempted to do a for loop, and console log each value it
-                would look like this:
-              </p>
-              <pre><code>async function foo() {
-                return 1
-             }</code></pre>
-              <button id="forloop" type="button" class="btn btn-dark">
+              <pre><code>let myCar = { make : "ford", 
+              model : "focus", 
+              color : "grey",
+              year : 2013}
+
+let sistersCar =  {make : "toyota", 
+                  model : "rav4", 
+                  color : "red",
+                  year: 2010}
+
+let dadsCar =  {make : "dodge", 
+                model : "ram", 
+                color : "red"
+                year : 2006}
+                
+let momsCar =  {make : "honda",
+                model : "crosstour", 
+                color : "white",
+                year : 2018}
+              </code></pre>
+              <button id="carsJS" type="button" class="btn btn-dark">
                 Run
               </button>
-              <pre id="aforloop" style="display: none"><code>apple
+              <pre id="acarsJS" style="display: none"><code>apple
 orange
 banana
 cucumber
 strawberry</code></pre>
+              <p></p>
               <p>
-                That is quite a lot of code 🙁 luckily the .forEach() function
-                makes this easier! 😃
+                This is quite a lot of code 🙁 there must be a simpler way to make multiple similar objects. Well thats where classes come in 😃.
               </p>
             </div>
             <h3 class="heading">Syntax</h3>
             <div class="col-md-10 side">
               <p>
-                In the .forEach() method, you initialize the array you want to
-                work with, then call .forEac() directly after the array name in
-                a statement. Within those parentheses you can place any function
-                and the method goes through each index in the array and applies
-                that function. Unlike the .map() method, it will not place it
-                back into an array.
+                You instantiate every class with the word class followed by the name and a set of curly brackets. Typically the name is capitalized (unlike most other variable) because it signals to others that this is a class and not a standard object. Using the first example, lets call this class Cars.
               </p>
-              <p>Function</p>
-              <pre><code>var array = ["index1", "index2", "index3"]
-array.forEach(function (element) {
-            your function here
-            })</code></pre>
-              <p>Fat arrow function</p>
-              <pre><code>var array = ["index1", "index2", "index3"]
-array.forEach(element => your function here)</code></pre>
+              <pre><code>class Cars {
+              }</code></pre>
               <p>
-                So for our fruits example the forEach function would look like:
+                Next comes the constructors. These are the things that will be consistent across all versions of objects this class will create. Each constructor will be inside of parentheses following the word constructor. Each one is separated by a comma with curly brackets after the parentheses. For the above example, it would be make, model, color, and year.
               </p>
-              <pre><code>var fruits = ["apple", "orange", "banana", "cucumber", "strawberry"]
-fruits.forEach(fruit => console.log(fruit))</code></pre>
+              <pre><code>class Cars {
+        constructors(make, model, color, year) {
+                }
+              }</code></pre>
+              <p>
+                Finally, you will assign each constructor a value within the object. This may seem redundant but it lets the object know which key and value pairs go together. Each on will start with a this.[constructor] = [constructor].
+              </p>
+              <pre><code>class Cars {
+        constructors(make, model, color, year) {
+              this.make = make;
+              this.model = model;
+              this.color  = color;
+              this.year = year;
+                }
+              }</code></pre>
+              <p>
+                So now that we have that class created what can we do with it? Well now we can simplify our example by creating each object.
+                <br>
+                First 
+              </p>
+              <pre><code>class Cars {
+                constructors(make, model, color, year) {
+                      this.make = make;
+                      this.model = model;
+                      this.color  = color;
+                      this.year = year
+                        }
+                      }
+
+let myCar = new Car("ford", "focus", "grey", 2013)
+let sistersCar = new Car("toyota", "rav4", "red", 2010)
+let dadsCar = new Car("dodge", "ram", "red", 2006)
+let momsCar = new Car("honda", "crosstour", "white", 2018)
+                    </code></pre>
               <button id="fruits" type="button" class="btn btn-dark">
                 Run
               </button>

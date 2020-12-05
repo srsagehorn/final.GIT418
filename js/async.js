@@ -25,3 +25,26 @@ features.forEach((button) => {
     }
   });
 });
+
+
+let myCar = { make : "ford", 
+              model : "focus", 
+              color : "grey",
+              year : 2013}
+
+let sistersCar =  {make : "toyota", 
+                  model : "rav4", 
+                  color : "red",
+                  year: 2010}
+
+let dadsCar =  {make : "dodge", 
+                model : "ram", 
+                color : "red"
+                year : 2006}
+                
+let momsCar =  {make : "honda",
+                model : "crosstour", 
+                color : "white",
+                year : 2018}
+
+console.log (myCar, S)
